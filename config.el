@@ -81,7 +81,9 @@
 ;;
 ;; they are implemented.
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Exit back to vim normal mode with key chords
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'key-chord)
 (key-chord-mode t)
 (key-chord-define-global "fd" 'evil-normal-state)
@@ -89,8 +91,27 @@
 ;; (key-chord-define-global "jh" 'evil-normal-state)
 ;; (key-chord-define-global "JH" 'evil-normal-state)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Multiple, partial undos within a single insert mode session
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq evil-want-fine-undo t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Keep current line vertically centered
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-centered-cursor-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Disable mouse
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun silence()
+  (interactive))
+;;; Don't move the cursor on click
+(define-key evil-motion-state-map [down-mouse-1] 'silence)
+(define-key evil-normal-state-map [down-mouse-1] 'silence)
+(define-key evil-insert-state-map [down-mouse-1] 'silence)
+(define-key evil-motion-state-map [mouse-1] 'silence)
+;;; Don't visual mode on drag
+(define-key evil-motion-state-map [drag-mouse-1] 'silence)
+(define-key evil-normal-state-map [drag-mouse-1] 'silence)
+(define-key evil-insert-state-map [drag-mouse-1] 'silence)
