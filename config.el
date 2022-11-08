@@ -115,3 +115,9 @@
 (define-key evil-motion-state-map [drag-mouse-1] 'silence)
 (define-key evil-normal-state-map [drag-mouse-1] 'silence)
 (define-key evil-insert-state-map [drag-mouse-1] 'silence)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Org configuration
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq org-tag-persistent-alist
+  '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
