@@ -28,17 +28,57 @@
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
-(setq doom-font (font-spec :family "Source Code Pro"
-;; (setq doom-font (font-spec :family "MesloNGS NF"
+(setq doom-font (font-spec :weight 'normal
+                           ;; :family "Source Code Pro"
+                           :family "MesloLGS NF"
                            :size 14.0
-                           :weight 'normal
                            :width 'normal))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'doom-one)
-(setq doom-theme 'dichromacy)
+
+;; DARK 
+(setq doom-theme 'doom-city-lights)  ; good style  ; low contrast  ; comments impossible to see (see below)
+        (setq doom-city-lights-brighter-comments t)
+        (setq doom-city-lights-comment-bg nil)
+;; (setq doom-theme 'doom-oceanic-next)  ; org is pretty good  ; code is great  ; python is ok
+;; (setq doom-theme 'doom-molokai)
+;;         (setq doom-molokai-brighter-comments t)
+;; (setq doom-theme 'doom-Iosvkem)  ; great, high contrast  ; org headlines low contrast
+;; (setq doom-theme 'tsdh-dark) ; can't undo bolding
+;; (setq doom-theme 'doom-acario-dark)
+;; (setq doom-theme 'doom-dark+)  ; great  ; too much green in comments  ; org headlines low contrast
+;; (setq doom-theme 'doom-lantern)
+;; (setq doom-theme 'doom-gruvbox)
+;; (setq doom-theme 'doom-zenburn)  ; great, cloudy
+;; (setq doom-theme 'doom-material-dark)
+;; (setq doom-theme 'doom-wilmersdorf)  ; soothing  ; not much contrast
+;; (setq doom-theme 'doom-nord-aurora)  ; soothing  ; not much contrast
+;; (setq doom-theme 'doom-manegarm)  ; old terminal style
+;;      (setq doom-manegarm-darker-background t)
+;; (setq doom-theme 'doom-miramare)  ; good, sepia feels
+;; (setq doom-theme 'doom-horizon)  ; great, high contrast  ; org headlines low contrast
+;; (setq doom-theme 'doom-palenight)  ; good low key, org headlines are low contrast
+;; (setq doom-theme 'doom-xcode)  ; hyper vibrant
+;; (setq doom-theme 'doom-snazzy)  ; hyper vibrant
+;; (setq doom-theme 'doom-tomorrow-night)  ; org is bad
+;; (setq doom-theme 'tango-dark)  ; great  ; too much green in comments  ; active line no color
+
+;; LIGHT
+;; (setq doom-theme 'doom-gruvbox-light)
+;; (setq doom-theme 'doom-solarized-light)
+;; (setq doom-theme 'dichromacy) ; can't undo bolding
+;; (setq doom-theme 'doom-nord-light)
+;; (setq doom-theme 'doom-flatwhite) ; org headlines low contrast  ; uses bg's for variables, strings, etc
+;; (setq doom-theme 'tsdh-light)  ; good basic
+;; (setq doom-theme 'tango)  ; good basic
+;; (setq doom-theme 'default)  ; good basic
+;; (setq doom-theme 'doom-tomorrow-day)  ; org headlines similar
+
+(setq doom-themes-enable-bold nil)
+(setq modus-themes-bold-constructs nil)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -121,4 +161,5 @@
 ;;; Org configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq org-tag-persistent-alist
-  '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
+  '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
+  ;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
