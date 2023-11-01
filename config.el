@@ -67,9 +67,9 @@
 ;; (setq doom-theme 'tango-dark)  ; great  ; too much green in comments  ; active line no color
 
 ;; LIGHT
+;; (setq doom-theme 'doom-solarized-light)
 ;; (setq doom-theme 'dichromacy) ; can't undo bolding  ; clear comments
 ;; (setq doom-theme 'doom-gruvbox-light)
-;; (setq doom-theme 'doom-solarized-light)
 ;; (setq doom-theme 'doom-nord-light)
 ;; (setq doom-theme 'doom-flatwhite) ; org headlines low contrast  ; uses bg's for variables, strings, etc
 ;; (setq doom-theme 'tsdh-light)  ; good basic
@@ -196,4 +196,4 @@
 ;; needed for emacs to find pylsp
 ;; enable for windows
 ;; disable for mac/linux
-;(setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")
+(setq lsp-pylsp-server-command "C:/Programs/Python/Python311/Scripts/pylsp.exe")
