@@ -41,8 +41,8 @@
 
 ;; DARK 
 (setq doom-theme 'doom-city-lights)  ; good style  ; low contrast  ; comments impossible to see (see below)
-        (setq doom-city-lights-brighter-comments t)
-        (setq doom-city-lights-comment-bg nil)
+(setq doom-city-lights-brighter-comments t)
+(setq doom-city-lights-comment-bg nil)
 ;; (setq doom-theme 'doom-Iosvkem)  ; great, high contrast  ; org headlines low contrast
 ;; (setq doom-theme 'doom-oceanic-next)  ; org is pretty good  ; code is great  ; python is ok
 ;; (setq doom-theme 'doom-molokai)
@@ -52,7 +52,12 @@
 ;; (setq doom-theme 'doom-dark+)  ; great  ; too much green in comments  ; org headlines low contrast
 ;; (setq doom-theme 'doom-lantern)
 ;; (setq doom-theme 'doom-gruvbox)
-;; (setq doom-theme 'doom-zenburn)  ; great, cloudy
+(setq doom-theme 'doom-zenburn)  ; great, cloudy
+(setq zenburn-override-colors-alist
+      '(("zenburn-bg+05" . "#282828")
+        ("zenburn-bg+1"  . "#2F2F2F")
+        ("zenburn-bg+2"  . "#3F3F3F")
+        ("zenburn-bg+3"  . "#4F4F4F")))
 ;; (setq doom-theme 'doom-material-dark)
 ;; (setq doom-theme 'doom-wilmersdorf)  ; soothing  ; not much contrast
 ;; (setq doom-theme 'doom-nord-aurora)  ; soothing  ; not much contrast
@@ -86,7 +91,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/git/org/")
+;; (setq org-directory "~/git/org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -162,8 +167,8 @@
 ;;; Org configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq org-tag-persistent-alist
-  '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
-  ;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
+      '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
+;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
 
 ;; Explanation of TODO keywords
   ;; (setq org-todo-keywords
@@ -196,4 +201,5 @@
 ;; needed for emacs to find pylsp
 ;; enable for windows
 ;; disable for mac/linux
-(setq lsp-pylsp-server-command "C:/Programs/Python/Python311/Scripts/pylsp.exe")
+;; (setq lsp-pylsp-server-command "C:/Programs/Python/Python311/Scripts/pylsp.exe")
+(setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")
