@@ -52,3 +52,6 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+;; Codeium, AI code completion
+(package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
