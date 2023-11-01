@@ -40,9 +40,9 @@
 ;; (setq doom-theme 'doom-one)
 
 ;; DARK 
-;; (setq doom-theme 'doom-city-lights)  ; good style  ; low contrast  ; comments impossible to see (see below)
-;;         (setq doom-city-lights-brighter-comments t)
-;;         (setq doom-city-lights-comment-bg nil)
+(setq doom-theme 'doom-city-lights)  ; good style  ; low contrast  ; comments impossible to see (see below)
+(setq doom-city-lights-brighter-comments t)
+(setq doom-city-lights-comment-bg nil)
 ;; (setq doom-theme 'doom-Iosvkem)  ; great, high contrast  ; org headlines low contrast
 ;; (setq doom-theme 'doom-oceanic-next)  ; org is pretty good  ; code is great  ; python is ok
 ;; (setq doom-theme 'doom-molokai)
@@ -167,8 +167,8 @@
 ;;; Org configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq org-tag-persistent-alist
-  '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
-  ;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
+      '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
+;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
 
 ;; Explanation of TODO keywords
   ;; (setq org-todo-keywords
@@ -201,4 +201,4 @@
 ;; needed for emacs to find pylsp
 ;; enable for windows
 ;; disable for mac/linux
-;(setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")
+(setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")

@@ -18,6 +18,8 @@
 ;; https://github.com/radian-software/straight.el#the-recipe-format
 ;(package! another-package
 ;  :recipe (:host github :repo "username/repo"))
+(package! explain-pause-mode
+   :recipe (:host github :repo "lastquestion/explain-pause-mode"))
 
 ;; If the package you are trying to install does not contain a PACKAGENAME.el
 ;; file, or is located in a subdirectory of the repo, you'll need to specify
@@ -52,3 +54,6 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+;; Codeium, AI code completion
+(package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
