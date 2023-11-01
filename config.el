@@ -164,4 +164,4 @@
   '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
   ;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
 
-(setq lsp-pylsp-server-command "C:/Programs/Python/Python311/Scripts/pylsp.exe")
+(setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")
