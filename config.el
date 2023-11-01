@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+;; (setq user-full-name "John Doe"
+;;       user-mail-address "john@doe.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -41,12 +41,12 @@
 
 ;; DARK 
 (setq doom-theme 'doom-city-lights)  ; good style  ; low contrast  ; comments impossible to see (see below)
-        (setq doom-city-lights-brighter-comments t)
-        (setq doom-city-lights-comment-bg nil)
+(setq doom-city-lights-brighter-comments t)
+(setq doom-city-lights-comment-bg nil)
+;; (setq doom-theme 'doom-Iosvkem)  ; great, high contrast  ; org headlines low contrast
 ;; (setq doom-theme 'doom-oceanic-next)  ; org is pretty good  ; code is great  ; python is ok
 ;; (setq doom-theme 'doom-molokai)
 ;;         (setq doom-molokai-brighter-comments t)
-;; (setq doom-theme 'doom-Iosvkem)  ; great, high contrast  ; org headlines low contrast
 ;; (setq doom-theme 'tsdh-dark) ; can't undo bolding
 ;; (setq doom-theme 'doom-acario-dark)
 ;; (setq doom-theme 'doom-dark+)  ; great  ; too much green in comments  ; org headlines low contrast
@@ -86,7 +86,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/git/personal/org/")
+(setq org-directory "~/git/org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -128,6 +128,7 @@
 (require 'key-chord)
 (key-chord-mode t)
 (key-chord-define-global "fd" 'evil-normal-state)
+(setq key-chord-safety-interval-forward 0.1)
 ;; (key-chord-define-global "FD" 'evil-normal-state)
 ;; (key-chord-define-global "jh" 'evil-normal-state)
 ;; (key-chord-define-global "JH" 'evil-normal-state)
@@ -161,7 +162,38 @@
 ;;; Org configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq org-tag-persistent-alist
-  '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
-  ;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
+      '(("HOUSE") ("WORK") ("CUSTOMER") ("SIDE") ("ENTERTAINMENT") ("LEARN")))
+;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
 
+;; Explanation of TODO keywords
+  ;; (setq org-todo-keywords
+  ;;       '((sequence
+  ;;          "TODO(t)"  ; A task that needs doing & is ready to do
+  ;;          "PROJ(p)"  ; A project, which usually contains other tasks
+  ;;          "LOOP(r)"  ; A recurring task
+  ;;          "STRT(s)"  ; A task that is in progress
+  ;;          "WAIT(w)"  ; Something external is holding up this task
+  ;;          "HOLD(h)"  ; This task is paused/on hold because of me
+  ;;          "IDEA(i)"  ; An unconfirmed and unapproved task or notion
+  ;;          "|"
+  ;;          "DONE(d)"  ; Task successfully completed
+  ;;          "KILL(k)") ; Task was cancelled, aborted or is no longer applicable
+  ;;         (sequence
+  ;;          "[ ](T)"   ; A task that needs doing
+  ;;          "[-](S)"   ; Task is in progress
+  ;;          "[?](W)"   ; Task is being held up or paused
+  ;;          "|"
+  ;;          "[X](D)")  ; Task was completed
+  ;;         (sequence
+  ;;          "|"
+  ;;          "OKAY(o)"
+  ;;          "YES(y)"
+  ;;          "NO(n)"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; LSP configuration
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; needed for emacs to find pylsp
+;; enable for windows
+;; disable for mac/linux
 (setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")
