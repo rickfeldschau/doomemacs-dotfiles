@@ -31,6 +31,8 @@
 (setq doom-font (font-spec :weight 'normal
                            ;; :family "Source Code Pro"
                            :family "MesloLGS NF"
+                           ;; :family "Meslo LG L"
+                           ;; :family "MesloLGS Nerd Font"
                            :size 14.0
                            :width 'normal))
 
@@ -52,12 +54,12 @@
 ;; (setq doom-theme 'doom-dark+)  ; great  ; too much green in comments  ; org headlines low contrast
 ;; (setq doom-theme 'doom-lantern)
 ;; (setq doom-theme 'doom-gruvbox)
-(setq doom-theme 'doom-zenburn)  ; great, cloudy
-(setq zenburn-override-colors-alist
-      '(("zenburn-bg+05" . "#282828")
-        ("zenburn-bg+1"  . "#2F2F2F")
-        ("zenburn-bg+2"  . "#3F3F3F")
-        ("zenburn-bg+3"  . "#4F4F4F")))
+;;(setq doom-theme 'doom-zenburn)  ; great, cloudy
+;; (setq zenburn-override-colors-alist
+;;       '(("zenburn-bg+05" . "#282828")
+;;         ("zenburn-bg+1"  . "#2F2F2F")
+;;         ("zenburn-bg+2"  . "#3F3F3F")
+;;         ("zenburn-bg+3"  . "#4F4F4F")))
 ;; (setq doom-theme 'doom-material-dark)
 ;; (setq doom-theme 'doom-wilmersdorf)  ; soothing  ; not much contrast
 ;; (setq doom-theme 'doom-nord-aurora)  ; soothing  ; not much contrast
@@ -146,7 +148,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Keep current line vertically centered
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(global-centered-cursor-mode t)
+;; (global-centered-cursor-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Disable mouse
@@ -171,29 +173,29 @@
 ;; '(("HOUSE(h)") ("WORK(w)") ("CUSTOMER(c)") ("SIDE(s)") ("ENTERTAINMENT(e)") ("LEARN(l)")))
 
 ;; Explanation of TODO keywords
-  ;; (setq org-todo-keywords
-  ;;       '((sequence
-  ;;          "TODO(t)"  ; A task that needs doing & is ready to do
-  ;;          "PROJ(p)"  ; A project, which usually contains other tasks
-  ;;          "LOOP(r)"  ; A recurring task
-  ;;          "STRT(s)"  ; A task that is in progress
-  ;;          "WAIT(w)"  ; Something external is holding up this task
-  ;;          "HOLD(h)"  ; This task is paused/on hold because of me
-  ;;          "IDEA(i)"  ; An unconfirmed and unapproved task or notion
-  ;;          "|"
-  ;;          "DONE(d)"  ; Task successfully completed
-  ;;          "KILL(k)") ; Task was cancelled, aborted or is no longer applicable
-  ;;         (sequence
-  ;;          "[ ](T)"   ; A task that needs doing
-  ;;          "[-](S)"   ; Task is in progress
-  ;;          "[?](W)"   ; Task is being held up or paused
-  ;;          "|"
-  ;;          "[X](D)")  ; Task was completed
-  ;;         (sequence
-  ;;          "|"
-  ;;          "OKAY(o)"
-  ;;          "YES(y)"
-  ;;          "NO(n)"))
+;; (setq org-todo-keywords
+;;       '((sequence
+;;          "TODO(t)"  ; A task that needs doing & is ready to do
+;;          "PROJ(p)"  ; A project, which usually contains other tasks
+;;          "LOOP(r)"  ; A recurring task
+;;          "STRT(s)"  ; A task that is in progress
+;;          "WAIT(w)"  ; Something external is holding up this task
+;;          "HOLD(h)"  ; This task is paused/on hold because of me
+;;          "IDEA(i)"  ; An unconfirmed and unapproved task or notion
+;;          "|"
+;;          "DONE(d)"  ; Task successfully completed
+;;          "KILL(k)") ; Task was cancelled, aborted or is no longer applicable
+;;         (sequence
+;;          "[ ](T)"   ; A task that needs doing
+;;          "[-](S)"   ; Task is in progress
+;;          "[?](W)"   ; Task is being held up or paused
+;;          "|"
+;;          "[X](D)")  ; Task was completed
+;;         (sequence
+;;          "|"
+;;          "OKAY(o)"
+;;          "YES(y)"
+;;          "NO(n)"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; LSP configuration
@@ -202,4 +204,4 @@
 ;; enable for windows
 ;; disable for mac/linux
 ;; (setq lsp-pylsp-server-command "C:/Programs/Python/Python311/Scripts/pylsp.exe")
-(setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")
+;; (setq lsp-pylsp-server-command "C:/Programs/Python/Python310/Scripts/pylsp.exe")
